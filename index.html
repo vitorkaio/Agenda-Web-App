@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda</title>
+    <link rel="stylesheet" href="css/tela.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+    
+    <script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>
+    
+    <script src="js/script.js" type="text/javascript"></script>
+    <script src="js/efeitos.js" type="text/javascript"></script>
+    <script src="js/materialize.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmvxKoU3iMLBRRQ-PM30Y1-30OU5HzxK8">
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+    <!--<center><h1 class="batata">Batata</h1></center>
+	 <button id="botaoPesquisa" onclick="alo()"><i class="material-icons">grade</i></button>
+
+	 <input type="text" placeholder="Texto" name="Teste" class="entrada" id="en">-->
+
+    <div class="row" id="menu">
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s3"><a href="#listar"><i class="material-icons">list</i>Listagem</a></li>
+                <li class="tab col s3"><a href="#cadastrar"><i class="material-icons">note_add</i>Cadastrar</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ************************* Listar ************************* -->
+    <div data-role="page" id="listar">
+        <center><i class="material-icons" onclick="atualizaLista()">update</i></center>
+        <div id="listar1" class="col s12">
+            <!-- Dropdown Structure -->
+            <div id="listar1.1" class="row">
+                <div id="listar1.2" class="col s12 m5">
+                    <div id="listar1.3" class="card-panel teal">
+                        <p>Titulo</p>
+                        <br>
+                        <span class="white-text">I am a very simple card. I am good at containing small bits of information.
+                      I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+                    </span>
+                        <br>
+                        <p> Hora </p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ************************* cadastrar ************************* -->
+    <div id="cadastrar" class="col s12">
+        <!-- -form recarrega a pag -->
+        <div class="row">
+            <div class="row">
+
+                <!-- ************************* Título ************************* -->
+                <div class="input-field col s12" id="titulo">
+                    <i class="material-icons prefix">title</i>
+                    <input id="entrada_titulo" type="text" class="validate">
+                    <label for="entrada_titulo">Adicionar título</label>
+                </div>
+
+                <!-- ************************* Nota ************************* -->
+                <div class="input-field col s12" id="nota">
+                    <i class="material-icons prefix">mode_edit</i>
+                    <textarea id="entrada_nota" class="materialize-textarea"></textarea>
+                    <label for="entrada_nota">Nota</label>
+                </div>
+
+                <!-- ************************* Data ************************* -->
+                <div class="input-field col s12" id="minha_data">
+                    <i class="material-icons prefix">date_range</i>
+                    <input id="aData" type="date" class="datepicker">
+                    <label for="aData">Data</label>
+                </div>
+
+                <button id="meu_botao" class="btn-floating btn-large waves-effect waves-light red" onclick="cadastrar()"><i class="material-icons">add</i></button>
+            </div>
+        </div>
+    </div>
+
+    <h1></h1>
+
+</body>
+
+</html>
